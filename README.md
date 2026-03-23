@@ -128,6 +128,7 @@ Special thanks to:
 - [@acuarica](https://github.com/acuarica) for the awesome JNIF library, which i modified to fit jnihook's use case.
 - [@griffith1deady](https://github.com/griffith1deady) for providing me informations about JVM internals.
 - [@TIMER-err](https://github.com/TIMER-err) for the jvm-runtime-noverify project, which made me realise I could patch flags at runtime cleanly.
-- [@awrped](http://github.com/awrped) for helping to fix Windows and JNIF issues.
+- [@awrped](https://github.com/awrped) for helping to fix Windows and JNIF issues.
 - myself for coming up with the V2 hooking method (c'mon, it was not an easy task)
+- [@rewawe](https://github.com/rewawe) for the bytecode hooking methods (init, clinit, midfunction)
 

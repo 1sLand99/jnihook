@@ -2,13 +2,23 @@ package dummy;
 
 import java.io.IOException;
 
-class Target {
+class TargetSuperclass {
+    public TargetSuperclass() {
+        System.out.println("TargetSuperclass called!");
+    }
+}
+
+class Target extends TargetSuperclass {
     public static class TargetSubclass {
         public static void doWhatever() {
             System.out.println("do whatever");
         }
     }
 
+    public Target() {
+        super();
+        System.out.println("constructor");
+    }
     public static Target newTarget() {
         return new Target();
     }
@@ -43,7 +53,21 @@ class Target {
 
         sayAnotherThing(10);
     }
+    public int midFunctionTest(){
+        System.out.println("guess what");
+        System.out.println("what");
+        return 10;
+    }
+    public static void midFunctionTest2(){
+        System.out.println("blah blah");
+        System.out.println("something");
+    }
+    public static Target midFunctionTest3() {
+        System.out.println("returning target");
+        return new Target();
+    }
 }
+
 
 public class Dummy {
     public static void main(String[] args) throws IOException {
@@ -61,11 +85,14 @@ public class Dummy {
         }
 
         System.in.read();
-
+        Target obj = new Target();
         Target target = Target.returnTarget(Target.newTarget());
         target.sayHello();
         target.sayHello();
-
+        target.midFunctionTest();
+        Target.midFunctionTest2();
+        Target.midFunctionTest2();
+        Target.midFunctionTest3();
         System.out.println("Done!");
     }
 }
